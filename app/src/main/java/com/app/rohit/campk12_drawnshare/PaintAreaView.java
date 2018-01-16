@@ -303,8 +303,7 @@ public class PaintAreaView extends View {
             c.drawPath(n, p);
         }
 
-        // Had to implement the Externalizable interface because Android was attempting
-        // to serialize the Path (even when marked transient). Weird.
+
         @Override
         public void writeExternal(ObjectOutput objectOutput) throws IOException {
             objectOutput.writeInt(color);
